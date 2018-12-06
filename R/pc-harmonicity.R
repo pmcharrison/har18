@@ -11,7 +11,7 @@ pc_harmonicity <- function(x,
 
 #' @export
 pc_harmonicity.default <- function(x, ...) {
-  pc_harmonicity(pc_set(x), ...)
+  pc_harmonicity(hrep::pc_set(x), ...)
 }
 
 #' @export
