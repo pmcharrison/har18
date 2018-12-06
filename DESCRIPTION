@@ -13,3 +13,5 @@ Imports:
     checkmate
 Remotes: pmcharrison/hrep
 RoxygenNote: 6.1.0
+Suggests: 
+    testthat
