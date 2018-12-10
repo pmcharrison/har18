@@ -24,7 +24,7 @@ pc_harmonicity.pc_set <- function(x,
                                   ...) {
   checkmate::qassert(method, "S1")
 
-  x <- hrep::pc_smooth_spectrum(x,
+  x <- hrep::pc_milne_spectrum(x,
                                 num_harmonics = num_harmonics,
                                 rho = rho,
                                 sigma = sigma,
@@ -38,7 +38,7 @@ pc_harmonicity.pc_set <- function(x,
 }
 
 #' @export
-pc_harmonicity.pc_smooth_spectrum <- function(x,
+pc_harmonicity.pc_milne_spectrum <- function(x,
                                               method = "kl",
                                               num_harmonics = 12,
                                               rho = 0.75,

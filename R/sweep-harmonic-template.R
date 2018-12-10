@@ -15,7 +15,7 @@ sweep_harmonic_template.pc_set <- function(x,
                                            sigma = 6.83,
                                            array_dim = 1200,
                                            ...) {
-  hrep::pc_smooth_spectrum(x,
+  hrep::pc_milne_spectrum(x,
                            num_harmonics = num_harmonics,
                            rho = rho,
                            sigma = sigma,
@@ -26,7 +26,7 @@ sweep_harmonic_template.pc_set <- function(x,
 }
 
 #' @export
-sweep_harmonic_template.pc_smooth_spectrum <- function(x,
+sweep_harmonic_template.pc_milne_spectrum <- function(x,
                                                        num_harmonics = 12,
                                                        rho = 0.75,
                                                        sigma = 6.83,
@@ -34,7 +34,7 @@ sweep_harmonic_template.pc_smooth_spectrum <- function(x,
   x <- as.numeric(x)
   array_dim <- length(x)
   res <- numeric(array_dim)
-  template <- hrep::pc_smooth_spectrum(hrep::pc_set(0),
+  template <- hrep::pc_milne_spectrum(hrep::pc_set(0),
                                        array_dim = array_dim,
                                        num_harmonics = num_harmonics,
                                        rho = rho,
@@ -43,5 +43,5 @@ sweep_harmonic_template.pc_smooth_spectrum <- function(x,
     indices <- 1 + (seq(from = i - 1, length.out = array_dim) %% array_dim)
     res[i] <- cosine_similarity(template, x[indices])
   }
-  hrep::.pc_smooth_spectrum(res)
+  hrep::.pc_milne_spectrum(res)
 }

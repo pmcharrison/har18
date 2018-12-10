@@ -4,7 +4,7 @@ peak <- function(x, ...) {
 }
 
 #' @export
-peak.pc_smooth_spectrum <- function(x, ...) {
+peak.pc_milne_spectrum <- function(x, ...) {
   max(as.numeric(x))
 }
 
@@ -14,7 +14,7 @@ kl_div_from_uniform <- function(x, ...) {
 }
 
 #' @export
-kl_div_from_uniform.pc_smooth_spectrum <- function(x, ...) {
+kl_div_from_uniform.pc_milne_spectrum <- function(x, ...) {
   # Construct a probability vector, where each bin corresponds to
   # the probability of a discrete event
   x <- as.numeric(x)
