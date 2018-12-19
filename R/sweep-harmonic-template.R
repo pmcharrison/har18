@@ -1,3 +1,16 @@
+#' Sweep harmonic template
+#'
+#' Sweeps a harmonic template over an input spectrum.
+#' @param x Object to analyse.
+#' @param num_harmonics See \code{\link{pc_harmonicity}}.
+#' @param rho See \code{\link{pc_harmonicity}}.
+#' @param sigma See \code{\link{pc_harmonicity}}.
+#' @param array_dim See \code{\link{pc_harmonicity}}.
+#' @param ... Arguments passed to specific methods.
+#' @return An object of class \code{\link[hrep]{pc_milne_spectrum}},
+#' identifying each pitch class with a perceptual weight
+#' corresponding to its harmonic template fit.
+#' @rdname sweep_harmonic_template
 #' @export
 sweep_harmonic_template <- function(x,
                                     num_harmonics = 12,
@@ -8,6 +21,7 @@ sweep_harmonic_template <- function(x,
   UseMethod("sweep_harmonic_template")
 }
 
+#' @rdname sweep_harmonic_template
 #' @export
 sweep_harmonic_template.pc_set <- function(x,
                                            num_harmonics = 12,
@@ -16,29 +30,30 @@ sweep_harmonic_template.pc_set <- function(x,
                                            array_dim = 1200,
                                            ...) {
   hrep::pc_milne_spectrum(x,
-                           num_harmonics = num_harmonics,
-                           rho = rho,
-                           sigma = sigma,
-                           array_dim = array_dim) %>%
+                          num_harmonics = num_harmonics,
+                          rho = rho,
+                          sigma = sigma,
+                          array_dim = array_dim) %>%
     sweep_harmonic_template(num_harmonics = num_harmonics,
                             rho = rho,
                             sigma = sigma)
 }
 
+#' @rdname sweep_harmonic_template
 #' @export
 sweep_harmonic_template.pc_milne_spectrum <- function(x,
-                                                       num_harmonics = 12,
-                                                       rho = 0.75,
-                                                       sigma = 6.83,
-                                                       ...) {
+                                                      num_harmonics = 12,
+                                                      rho = 0.75,
+                                                      sigma = 6.83,
+                                                      ...) {
   x <- as.numeric(x)
   array_dim <- length(x)
   res <- numeric(array_dim)
   template <- hrep::pc_milne_spectrum(hrep::pc_set(0),
-                                       array_dim = array_dim,
-                                       num_harmonics = num_harmonics,
-                                       rho = rho,
-                                       sigma = sigma)
+                                      array_dim = array_dim,
+                                      num_harmonics = num_harmonics,
+                                      rho = rho,
+                                      sigma = sigma)
   for (i in seq_len(array_dim)) {
     indices <- 1 + (seq(from = i - 1, length.out = array_dim) %% array_dim)
     res[i] <- cosine_similarity(template, x[indices])

@@ -7,10 +7,12 @@ Depends: R (>= 3.5.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+RdMacros: Rdpack
 Imports: 
     hrep,
     magrittr,
-    checkmate
+    checkmate,
+    Rdpack
 Remotes: pmcharrison/hrep
 RoxygenNote: 6.1.0
 Suggests: 
