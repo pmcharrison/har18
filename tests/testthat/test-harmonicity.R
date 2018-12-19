@@ -5,7 +5,7 @@ library(magrittr)
 
 test_that("Legacy comparisons with HarmonyStats package", {
   pc_set_ids <- c(1, 100, 300, 500, 650, 800, 900, 1000, 1200, 1500)
-  pc_sets <- pc_set_ids %>% decode("pc_set") %>% as.list
+  pc_sets <- pc_set_ids %>% coded_vec("pc_set") %>% decode %>% as.list
   pc_set_sizes <- vapply(pc_sets, length, integer(1))
 
   # The following commented out code was used to generate the
