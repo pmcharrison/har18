@@ -11,7 +11,7 @@ peak <- function(x) {
 
 #' @rdname peak
 #' @export
-peak.pc_milne_spectrum <- function(x) {
+peak.milne_pc_spectrum <- function(x) {
   max(as.numeric(x))
 }
 
@@ -30,7 +30,7 @@ kl_div_from_uniform <- function(x) {
 
 #' @rdname kl_div_from_uniform
 #' @export
-kl_div_from_uniform.pc_milne_spectrum <- function(x) {
+kl_div_from_uniform.milne_pc_spectrum <- function(x) {
   # Construct a probability vector, where each bin corresponds to
   # the probability of a discrete event
   x <- as.numeric(x)

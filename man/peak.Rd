@@ -2,12 +2,12 @@
 % Please edit documentation in R/features.R
 \name{peak}
 \alias{peak}
-\alias{peak.pc_milne_spectrum}
+\alias{peak.milne_pc_spectrum}
 \title{Peak}
 \usage{
 peak(x)
 
-\method{peak}{pc_milne_spectrum}(x)
+\method{peak}{milne_pc_spectrum}(x)
 }
 \arguments{
 \item{x}{Object to analyse.}

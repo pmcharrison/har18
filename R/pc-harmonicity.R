@@ -29,7 +29,7 @@
 #' \insertCite{Milne2016;textual}{har18}.
 #' @param ... Arguments passed to specific methods.
 #' @return Pitch-class harmonicity, as a numeric scalar.
-#' @note This algorithm makes use of \code{\link[hrep]{pc_milne_spectrum}()}
+#' @note This algorithm makes use of \code{\link[hrep]{milne_pc_spectrum}()}
 #' as defined in the \code{hrep} package.
 #' @md
 #' @references
@@ -73,7 +73,7 @@ pc_harmonicity.pc_set <- function(x,
                                   ...) {
   checkmate::qassert(method, "S1")
 
-  x <- hrep::pc_milne_spectrum(x,
+  x <- hrep::milne_pc_spectrum(x,
                                num_harmonics = num_harmonics,
                                rho = rho,
                                sigma = sigma,
@@ -87,7 +87,7 @@ pc_harmonicity.pc_set <- function(x,
 
 #' @rdname pc_harmonicity
 #' @export
-pc_harmonicity.pc_milne_spectrum <- function(x,
+pc_harmonicity.milne_pc_spectrum <- function(x,
                                              method = "kl",
                                              num_harmonics = 12,
                                              rho = 0.75,

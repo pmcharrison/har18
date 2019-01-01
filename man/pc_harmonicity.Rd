@@ -4,7 +4,7 @@
 \alias{pc_harmonicity}
 \alias{pc_harmonicity.default}
 \alias{pc_harmonicity.pc_set}
-\alias{pc_harmonicity.pc_milne_spectrum}
+\alias{pc_harmonicity.milne_pc_spectrum}
 \title{Pitch-class harmonicity}
 \usage{
 pc_harmonicity(x, method = "kl", num_harmonics = 12, rho = 0.75,
@@ -16,7 +16,7 @@ pc_harmonicity(x, method = "kl", num_harmonics = 12, rho = 0.75,
 \method{pc_harmonicity}{pc_set}(x, method = "kl", num_harmonics = 12,
   rho = 0.75, sigma = 6.83, array_dim = 1200, ...)
 
-\method{pc_harmonicity}{pc_milne_spectrum}(x, method = "kl",
+\method{pc_harmonicity}{milne_pc_spectrum}(x, method = "kl",
   num_harmonics = 12, rho = 0.75, sigma = 6.83, ...)
 }
 \arguments{
@@ -63,7 +63,7 @@ Gets the pitch-class harmonicity of an input sonority, after
 \insertCite{Milne2013;textual}{har18}.
 }
 \note{
-This algorithm makes use of \code{\link[hrep]{pc_milne_spectrum}()}
+This algorithm makes use of \code{\link[hrep]{milne_pc_spectrum}()}
 as defined in the \code{hrep} package.
 }
 \examples{

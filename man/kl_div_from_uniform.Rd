@@ -2,12 +2,12 @@
 % Please edit documentation in R/features.R
 \name{kl_div_from_uniform}
 \alias{kl_div_from_uniform}
-\alias{kl_div_from_uniform.pc_milne_spectrum}
+\alias{kl_div_from_uniform.milne_pc_spectrum}
 \title{Kullback-Leibler divergence from uniform}
 \usage{
 kl_div_from_uniform(x)
 
-\method{kl_div_from_uniform}{pc_milne_spectrum}(x)
+\method{kl_div_from_uniform}{milne_pc_spectrum}(x)
 }
 \arguments{
 \item{x}{Input distribution.}

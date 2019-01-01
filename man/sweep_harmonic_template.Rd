@@ -3,7 +3,7 @@
 \name{sweep_harmonic_template}
 \alias{sweep_harmonic_template}
 \alias{sweep_harmonic_template.pc_set}
-\alias{sweep_harmonic_template.pc_milne_spectrum}
+\alias{sweep_harmonic_template.milne_pc_spectrum}
 \title{Sweep harmonic template}
 \usage{
 sweep_harmonic_template(x, num_harmonics = 12, rho = 0.75,
@@ -12,7 +12,7 @@ sweep_harmonic_template(x, num_harmonics = 12, rho = 0.75,
 \method{sweep_harmonic_template}{pc_set}(x, num_harmonics = 12,
   rho = 0.75, sigma = 6.83, array_dim = 1200, ...)
 
-\method{sweep_harmonic_template}{pc_milne_spectrum}(x,
+\method{sweep_harmonic_template}{milne_pc_spectrum}(x,
   num_harmonics = 12, rho = 0.75, sigma = 6.83, ...)
 }
 \arguments{
@@ -29,7 +29,7 @@ sweep_harmonic_template(x, num_harmonics = 12, rho = 0.75,
 \item{...}{Arguments passed to specific methods.}
 }
 \value{
-An object of class \code{\link[hrep]{pc_milne_spectrum}},
+An object of class \code{\link[hrep]{milne_pc_spectrum}},
 identifying each pitch class with a perceptual weight
 corresponding to its harmonic template fit.
 }
