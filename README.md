@@ -10,6 +10,7 @@ status](https://travis-ci.org/pmcharrison/har18.svg?branch=master)](https://trav
 status](https://ci.appveyor.com/api/projects/status/github/pmcharrison/har18?branch=master&svg=true)](https://ci.appveyor.com/project/pmcharrison/har18)
 [![Coverage
 status](https://coveralls.io/repos/github/pmcharrison/har18/badge.svg)](https://coveralls.io/r/pmcharrison/har18?branch=master)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2545752.svg)](https://doi.org/10.5281/zenodo.2545752)
 
 Harmonicity is an important predictor of a chord’s consonance. This
 package provides methods for estimating a chord’s harmonicity, after
