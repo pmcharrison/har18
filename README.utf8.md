@@ -4,14 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r setup, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
+
 # har18: Implementation of Harrison & Pearce's (2018) Harmonicity Model
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
@@ -36,19 +29,25 @@ devtools::install_github("pmcharrison/har18")
 
 A major chord is more harmonic than a diminished chord, as expected:
 
-```{r}
+
+```r
 library(har18)
 
 pc_harmonicity("0 4 7")
+#> [1] 0.9373149
 pc_harmonicity("0 3 6")
+#> [1] 0.7225033
 ```
 
 By default, the package implements the method of Harrison & Pearce (2018).
 Setting the option `method = "peak"` reproduces the method of Milne (2013).
 
-```{r}
+
+```r
 pc_harmonicity("0 4 7", method = "peak")
+#> [1] 0.7170107
 pc_harmonicity("0 3 6", method = "peak")
+#> [1] 0.5896047
 ```
 
 ## References

@@ -3,7 +3,13 @@
 
 # har18: Implementation of Harrison & Pearce’s (2018) Harmonicity Model
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+[![Travis build
+status](https://travis-ci.org/pmcharrison/har18.svg?branch=master)](https://travis-ci.org/pmcharrison/har18)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/pmcharrison/har18?branch=master&svg=true)](https://ci.appveyor.com/project/pmcharrison/har18)
+[![Coverage
+status](https://coveralls.io/repos/github/pmcharrison/har18/badge.svg)](https://coveralls.io/r/pmcharrison/har18?branch=master)
 
 Harmonicity is an important predictor of a chord’s consonance. This
 package provides methods for estimating a chord’s harmonicity, after
