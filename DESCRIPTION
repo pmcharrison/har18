@@ -1,6 +1,6 @@
 Package: har18
 Title: Implementation of Harrison & Pearce's (2018) Harmonicity Model
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: person("Peter", "Harrison", email = "pmc.harrison@gmail.com", role = c("aut", "cre"))
 Description: This package implements the harmonicity model from Harrison & Pearce's (2018) paper in the Proceedings of the 19th International Society for Music Information Retrieval Conference.
 Depends: R (>= 3.5.0)
