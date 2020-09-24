@@ -7,17 +7,43 @@
 \alias{pc_harmonicity.milne_pc_spectrum}
 \title{Pitch-class harmonicity}
 \usage{
-pc_harmonicity(x, method = "kl", num_harmonics = 12, rho = 0.75,
-  sigma = 6.83, ...)
+pc_harmonicity(
+  x,
+  method = "kl",
+  num_harmonics = 12,
+  rho = 0.75,
+  sigma = 6.83,
+  ...
+)
 
-\method{pc_harmonicity}{default}(x, method = "kl", num_harmonics = 12,
-  rho = 0.75, sigma = 6.83, array_dim = 1200, ...)
+\method{pc_harmonicity}{default}(
+  x,
+  method = "kl",
+  num_harmonics = 12,
+  rho = 0.75,
+  sigma = 6.83,
+  array_dim = 1200,
+  ...
+)
 
-\method{pc_harmonicity}{pc_set}(x, method = "kl", num_harmonics = 12,
-  rho = 0.75, sigma = 6.83, array_dim = 1200, ...)
+\method{pc_harmonicity}{pc_set}(
+  x,
+  method = "kl",
+  num_harmonics = 12,
+  rho = 0.75,
+  sigma = 6.83,
+  array_dim = 1200,
+  ...
+)
 
-\method{pc_harmonicity}{milne_pc_spectrum}(x, method = "kl",
-  num_harmonics = 12, rho = 0.75, sigma = 6.83, ...)
+\method{pc_harmonicity}{milne_pc_spectrum}(
+  x,
+  method = "kl",
+  num_harmonics = 12,
+  rho = 0.75,
+  sigma = 6.83,
+  ...
+)
 }
 \arguments{
 \item{x}{Object to analyse.}

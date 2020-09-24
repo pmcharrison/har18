@@ -14,7 +14,7 @@ Imports:
     checkmate,
     Rdpack
 Remotes: pmcharrison/hrep
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.1
 Suggests: 
     testthat,
     covr

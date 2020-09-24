@@ -6,14 +6,25 @@
 \alias{sweep_harmonic_template.milne_pc_spectrum}
 \title{Sweep harmonic template}
 \usage{
-sweep_harmonic_template(x, num_harmonics = 12, rho = 0.75,
-  sigma = 6.83, array_dim = 1200, ...)
+sweep_harmonic_template(
+  x,
+  num_harmonics = 12,
+  rho = 0.75,
+  sigma = 6.83,
+  array_dim = 1200,
+  ...
+)
 
-\method{sweep_harmonic_template}{pc_set}(x, num_harmonics = 12,
-  rho = 0.75, sigma = 6.83, array_dim = 1200, ...)
+\method{sweep_harmonic_template}{pc_set}(
+  x,
+  num_harmonics = 12,
+  rho = 0.75,
+  sigma = 6.83,
+  array_dim = 1200,
+  ...
+)
 
-\method{sweep_harmonic_template}{milne_pc_spectrum}(x,
-  num_harmonics = 12, rho = 0.75, sigma = 6.83, ...)
+\method{sweep_harmonic_template}{milne_pc_spectrum}(x, num_harmonics = 12, rho = 0.75, sigma = 6.83, ...)
 }
 \arguments{
 \item{x}{Object to analyse.}
