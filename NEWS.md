@@ -1,3 +1,5 @@
+# har18 0.2.1
+
 * Rewrite sweep_template in C++ for speed.
 
 # har18 0.2.0
