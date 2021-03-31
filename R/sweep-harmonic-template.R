@@ -48,15 +48,49 @@ sweep_harmonic_template.milne_pc_spectrum <- function(x,
                                                       ...) {
   x <- as.numeric(x)
   array_dim <- length(x)
-  res <- numeric(array_dim)
   template <- hrep::milne_pc_spectrum(hrep::pc_set(0),
                                       array_dim = array_dim,
                                       num_harmonics = num_harmonics,
                                       rho = rho,
                                       sigma = sigma)
+  res <- sweep_template(x, template)
+
+  hrep::.milne_pc_spectrum(res)
+}
+
+#' Sweep template
+#'
+#' Sweeps a circular template over a circular vector
+#' and computes the cosine similarity at each possible offset.
+#'
+#' @param x
+#' (Numeric vector)
+#' The vector to be swept over.
+#'
+#' @param template
+#' (Numeric vector)
+#' The template to sweep over \code{x}.
+#' Should have the same dimensionality as \code{x}.
+#'
+#' @param legacy
+#' (Logical scalar)
+#' Whether to use the legacy R implementation
+#' (default = \code{FALSE}).
+#' Otherwise the faster C++ implementation is used.
+#'
+#' @export
+sweep_template <- function(x, template, legacy = FALSE) {
+  if (!legacy) {
+    return(sweep_template_cpp(x, template))
+  }
+
+  array_dim <- length(x)
+  res <- numeric(array_dim)
+
   for (i in seq_len(array_dim)) {
     indices <- 1 + (seq(from = i - 1, length.out = array_dim) %% array_dim)
     res[i] <- cosine_similarity(template, x[indices])
   }
-  hrep::.milne_pc_spectrum(res)
+
+  res
 }

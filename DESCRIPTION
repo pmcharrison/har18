@@ -12,9 +12,12 @@ Imports:
     hrep,
     magrittr,
     checkmate,
-    Rdpack
+    Rdpack,
+    Rcpp
 Remotes: pmcharrison/hrep
 RoxygenNote: 7.1.1
 Suggests: 
     testthat,
     covr
+LinkingTo: 
+    Rcpp
